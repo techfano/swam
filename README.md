@@ -20,7 +20,7 @@ Finally execute the last command
 
 grunt server
 
-this command is executed for activate the grunt task for import and order the bower dependencies, minifying css and js files, develop with live overload and other tasks in advance.
+this command is executed for activate the grunt tasks, for to import and order the bower dependencies, minifying css and js files, develop with live overload and other tasks in advance.
 
 Thanks.
 

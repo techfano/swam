@@ -20,6 +20,7 @@ when you are into the main file execute the follow commands:
 
 <code>
 npm install (for install the nodejs dependencies and grunt packages)
+
 bower install (for install the bower components for to develop)
 </code>
 

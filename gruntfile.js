@@ -7,27 +7,41 @@ module.exports = function(grunt) {
   // Configure Grunt 
   grunt.initConfig({
 
-    // uglify: {
-    //   my_target: {
-    //     files: [{
-    //         expand: true,
-    //         cwd: 'src/js',
-    //         src: '**/*.js',
-    //         dest: 'dest/js'
-    //     }]
-    //   }
-    // },
+    uglify: {
+      my_target: {
+        files: [{
+            expand: true,
+            cwd: 'source/js/lib',
+            src: '**/*.js',
+            dest: 'distro/js/lib'
+        }]
+      }
+    },
+
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'source/css',
+          src: '**/*.css',
+          dest: 'distro/css',
+        }]
+      }
+    },
 
     bower: {
-      install: {
+      dev: {
+        dest: 'source/',
+        js_dest: 'source/js/lib',
         options: {
-          targetDir: './source',
-          layout: 'byType',
-          install: true,
-          verbose: false,
-          cleanTargetDir: false,
-          cleanBowerDir: false,
-          bowerOptions: {}
+          ignorePackages: ['jquery'],
+          packageSpecific: {
+            bootstrap: {
+              dest: 'source',
+              css_dest: 'source/css',
+              fonts_dest: 'source/css/'
+            }
+          }
         }
       }
     },
@@ -79,4 +93,10 @@ module.exports = function(grunt) {
     'open',
     'watch'
   ]);
+
+  grunt.registerTask('packing', [
+    'uglify',
+    'cssmin'
+  ]);
+
 };

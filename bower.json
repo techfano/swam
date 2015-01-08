@@ -1,33 +1,18 @@
 {
-  "name": "web-app-arch",
+  "name": "swam",
   "version": "0.0.1",
   "authors": [
     "Estefano Castañeda <mixc21@gmail.com>"
   ],
-  "description": "architectural prototype for one modern web application",
+  "description": "architectural prototype for modern web applications",
   "license": "MIT",
   "dependencies": {
     "angular": "~1.2.28",
     "angular-route": "~1.2.28",
     "angular-resource": "~1.2.28",
     "angularAMD": "~0.2.1",
-    "requirejs": "~2.1.15"
-  },
-  "exportsOverride": {
-    "angular": {
-      "js/lib": "angular.js"
-    },
-    "angular-route": {
-      "js/lib": "angular-route.js"
-    },
-    "angular-resource": {
-      "js/lib": "angular-resource.js"
-    },
-    "angularAMD": {
-      "js/lib": "angularAMD.js"
-    },
-    "requirejs": {
-      "js/lib": "require.js"
-    }
+    "requirejs": "~2.1.15",
+    "bootstrap": "~3.3.1"
   }
+  
 }

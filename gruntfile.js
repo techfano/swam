@@ -72,8 +72,8 @@ module.exports = function(grunt) {
     }
   });
  
-  // Creates the `server` task
-  grunt.registerTask('server', [
+  // Creates the `swam` task
+  grunt.registerTask('swam', [
     'express',
     'bower',
     'open',

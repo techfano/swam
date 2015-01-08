@@ -24,7 +24,7 @@ when you are into the main file execute the follow commands:
 Finally execute the grunt task
 
 <code>
-grunt server
+grunt swam
 </code>
 
 

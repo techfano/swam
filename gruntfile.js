@@ -7,6 +7,21 @@ module.exports = function(grunt) {
   // Configure Grunt 
   grunt.initConfig({
 
+    htmlbuild: {
+        dist: {
+            src: 'template/index.tmp.html',
+            dest: 'source/index.html',
+            options: {
+                beautify: true,
+                styles: {
+                    bundle: [ 
+                        'source/css/dist/css/bootstrap.css'
+                    ]
+                }
+            }
+        }
+    },
+
     uglify: {
       my_target: {
         files: [{
@@ -37,7 +52,6 @@ module.exports = function(grunt) {
           ignorePackages: ['jquery'],
           packageSpecific: {
             bootstrap: {
-              dest: 'source',
               css_dest: 'source/css',
               fonts_dest: 'source/css/'
             }
@@ -45,6 +59,8 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    //*****************************************************
  
     // grunt-express will serve the files from the folders listed in `bases`
     // on specified `port` and `hostname`
@@ -90,6 +106,7 @@ module.exports = function(grunt) {
   grunt.registerTask('swam', [
     'express',
     'bower',
+    'htmlbuild',
     'open',
     'watch'
   ]);

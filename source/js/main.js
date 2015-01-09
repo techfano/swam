@@ -3,10 +3,10 @@ require.config({
   baseUrl: "js/scripts",
 
   paths: {
-    'angular': '../lib/angular/angular',
-    'angular-route': '../lib/angular-route/angular-route',
-    'angular-resource': '../lib/angular-resource/angular-resource',
-    'angularAMD': '../lib/angularAMD/angularAMD',
+    'angular': '../lib/angular',
+    'angular-route': '../lib/angular-route',
+    'angular-resource': '../lib/angular-resource',
+    'angularAMD': '../lib/angularAMD',
     'directives': 'directives',
     'factories': 'factories',
   },

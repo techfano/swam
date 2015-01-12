@@ -1,0 +1,10 @@
+.navbar {
+	margin-bottom: 0px !important;
+	border-radius: 0px !important;
+}
+
+.main-content{
+	height: 100%;
+	width: 100%;
+	padding:20px;
+}

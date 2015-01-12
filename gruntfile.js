@@ -15,7 +15,8 @@ module.exports = function(grunt) {
                 beautify: true,
                 styles: {
                     bundle: [ 
-                        'source/css/dist/css/bootstrap.css'
+                        'source/css/dist/css/bootstrap.css',
+                        'source/css/attach.css'
                     ]
                 }
             }

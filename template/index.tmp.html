@@ -11,7 +11,30 @@
 
     <body>
 
-        <div ng-view></div>
+	    <nav class="navbar navbar-inverse">
+
+	    	<div class="container-fluid">
+	        
+	            <div class="navbar-header">
+	              
+	              <a class="navbar-brand" href="">Brand</a>
+	            </div>
+
+	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+	              <ul class="nav navbar-nav">
+	                <li class="active"><a href="">Home</a></li>
+	                <li><a href="">Link</a></li>
+	                <li><a href="">Link</a></li>
+	              </ul>
+	            </div>
+	        
+	        </div>
+
+	    </nav>
+
+		<div class="main-content" ng-view></div>
+
+        
 
         <script src="js/config/config.js"></script>
         <script data-main="js/main.js" src="js/lib/require.js"></script>

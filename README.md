@@ -1,5 +1,5 @@
 # swam
-Simple Web Application Management
+Simple Web Application Management, an architectural prototype for modern web applications, using angular AMD and Bootstrap CSS.
 
 # Getting started
 

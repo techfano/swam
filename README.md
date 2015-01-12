@@ -6,7 +6,7 @@ Simple Web Application Management, an architectural prototype for modern web app
 - A simple way to managing your web applications.
 - Index.html file generated automatically.
 - Bower components administration automatically.
-- AMD architecture integrated. 
+- Angular AMD architecture integrated. 
 - Controlling your web apps development and distributions
 - minifying css and js distribution automatically
 - Developing with live reaload (in port: 9000)

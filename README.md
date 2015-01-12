@@ -1,6 +1,16 @@
 # swam
-Simple Web Application Management, an architectural prototype for modern web applications, using angular AMD and Bootstrap CSS.
+Simple Web Application Management, an architectural prototype for modern web applications, using angular AMD, Bootstrap CSS, Grunt and Bower.
 
+#Features
+
+- A simple way to managing your web applications.
+- Index.html file generated automatically.
+- Bower components administration automatically.
+- AMD architecture integrated. 
+- Controlling your web apps development and distributions
+- minifying css and js distribution automatically
+- Developing with live reaload (in port: 9000)
+ 
 # Getting started
 
 it's easy to use first you need to instal the follow
@@ -26,6 +36,14 @@ Finally execute the grunt task
 <code>
 grunt swam
 </code>
+
+The command "grunt swam", create automatically the index.html, copy and incorporate inside index the tags for bower dependencies and javascript files.
+
+<code>
+grunt packing
+</code>
+
+This command create the "distro" file with the css and js minified.
 
 
 this command is executed for activate the grunt tasks, for to import and order the bower dependencies, minifying css and js files, develop with live overload and other tasks in advance.

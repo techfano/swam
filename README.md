@@ -4,7 +4,7 @@ Simple Web Application Management, an architectural prototype for modern web app
 #Features
 
 - A simple way to managing your web applications.
-- Index.html file generated automatically.
+- Index.html file generation and administration automatically.
 - Bower components administration automatically.
 - AngularJS AMD architecture integrated. 
 - Controlling your web apps development and distributions
@@ -37,7 +37,12 @@ Finally execute the grunt tasks
 grunt swam
 </code>
 
-The command "grunt swam", create automatically the index.html, copy and incorporate inside index the tags for bower dependencies and javascript files.
+The command "grunt swam", create automatically the index.html, copy and incorporate inside index the tags for bower dependencies and javascript files, you can administrate too the index.html in the template file
+
+- template/
+  - index.html
+  - header.html
+  - footer.html
 
 <code>
 grunt packing

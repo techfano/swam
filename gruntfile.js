@@ -13,6 +13,11 @@ module.exports = function(grunt) {
             dest: 'source/index.html',
             options: {
                 beautify: true,
+                scripts: {
+                    bundle: [
+                        'source/js/config/config.js'
+                    ]
+                },
                 styles: {
                     bundle: [ 
                         'source/css/dist/css/bootstrap.css',

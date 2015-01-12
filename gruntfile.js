@@ -9,10 +9,11 @@ module.exports = function(grunt) {
 
     htmlbuild: {
         dist: {
-            src: 'template/index.tmp.html',
+            src: 'template/index.html',
             dest: 'source/index.html',
             options: {
                 beautify: true,
+                relative: true,
                 scripts: {
                     bundle: [
                         'source/js/config/config.js'
@@ -23,7 +24,13 @@ module.exports = function(grunt) {
                         'source/css/dist/css/bootstrap.css',
                         'source/css/attach.css'
                     ]
-                }
+                },
+                sections: {
+                    layout: {
+                        header: 'template/header.html',
+                        footer: 'template/footer.html'
+                    }
+                },
             }
         }
     },

@@ -4,7 +4,7 @@
   "authors": [
     "Estefano Castañeda <mixc21@gmail.com>"
   ],
-  "description": "architectural prototype for modern web applications",
+  "description": "Simple Web Application Management, an architectural prototype for modern web applications, using angular AMD and Bootstrap CSS",
   "license": "MIT",
   "dependencies": {
     "angular": "~1.2.28",

@@ -48,7 +48,7 @@ The command "grunt swam", create automatically the index.html, copy and incorpor
 grunt packing
 </code>
 
-This command create the "distro" file with the css and js minified.
+This command create the "distro" file with the css and js minified, and all the necesary (in advance).
 
 
 this command is executed for activate the grunt tasks, for to import and order the bower dependencies, minifying css and js files, develop with live overload and other tasks in advance.

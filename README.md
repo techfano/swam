@@ -1,6 +1,8 @@
 # swam
 Simple Web Application Management, an architectural prototype for modern web applications, using angular AMD, Bootstrap CSS, Grunt and Bower.
 
+Licensed under MIT. Swam is absolutely free for personal or commercial use.
+
 #Features
 
 - A simple way to managing your web applications.

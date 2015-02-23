@@ -73,6 +73,21 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: {
+      index: {
+        expand: true,
+        cwd: 'source/',
+        src: 'index.html',
+        dest: 'distro/',
+      },
+      views: {
+        expand: true,
+        cwd: 'source/views',
+        src: '*.html',
+        dest: 'distro/views',
+      }
+    },
+
     //*****************************************************
  
     // grunt-express will serve the files from the folders listed in `bases`
@@ -99,7 +114,12 @@ module.exports = function(grunt) {
         // or an Array of String for multiple entries
         // You can use globing patterns like `css/**/*.css`
         // See https://github.com/gruntjs/grunt-contrib-watch#files
-        files: 'index.html',
+        files: [
+                'index.html',
+                'source/**/*.js',
+                'source/config/**.js',
+                'source/scripts/**/*.js',
+                'source/css/dist/**.css'],
         options: {
           livereload: true
         }
@@ -126,7 +146,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('packing', [
     'uglify',
-    'cssmin'
+    'cssmin',
+    'copy:index',
+    'copy:views'
   ]);
 
 };

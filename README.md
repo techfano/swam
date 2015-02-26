@@ -39,9 +39,9 @@ Finally execute the grunt tasks
 grunt swam
 </code>
 
-The command "grunt swam", create automatically the index.html, copy and incorporate inside index the tags for bower dependencies and javascript files, you can administrate too the index.html in the template file
+The command "grunt swam", create automatically the index.html, copy and incorporate inside index the tags for bower dependencies and javascript files, you can administrate too the index.html in the template file for example:
 
-- template/
+- template/source
   - index.html
   - header.html
   - footer.html

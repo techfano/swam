@@ -117,14 +117,15 @@ module.exports = function(grunt) {
       }
     },
 
-    remove: {
-    options: {
-      trace: true
+    jshint: {
+      beforeconcat: ['distro/js/lib/**.js',
+                    'distro/js/lib/dist/js/**.js',
+                    'distro/js/main.js',
+                    'distro/js/scripts/app.js',
+                    'distro/js/scripts/**/*.js'],
+      afterconcat: ['distro/js/distro.js']
     },
-    fileList: ['path_to_file_1.extension', 'path_to_file_2.extension'],
-    dirList: ['path_to_dir_1', 'path_to_dir2/']
-  },
-
+   
     //*****************************************************
  
     // grunt-express will serve the files from the folders listed in `bases`
@@ -182,6 +183,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('packing', [
+    'jshint',
     'uglify',
     'cssmin',
     'copy:index',

@@ -8,8 +8,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     htmlbuild: {
-        dist: {
-            src: 'template/index.html',
+        source: {
+            src: 'template/source/index.html',
             dest: 'source/index.html',
             options: {
                 beautify: true,
@@ -27,8 +27,8 @@ module.exports = function(grunt) {
                 },
                 sections: {
                     layout: {
-                        header: 'template/header.html',
-                        footer: 'template/footer.html'
+                        header: 'template/source/header.html',
+                        footer: 'template/source/footer.html'
                     }
                 },
             }
@@ -85,8 +85,45 @@ module.exports = function(grunt) {
         cwd: 'source/views',
         src: '*.html',
         dest: 'distro/views',
+      },
+      config: {
+        expand: true,
+        cwd: 'source/js/config',
+        src: '*.js',
+        dest: 'distro/js/config',
+      },
+      scripts: {
+        expand: true,
+        cwd: 'source/js/scripts/',
+        src: '**/*.js',
+        dest: 'distro/js/scripts/',
+      },
+      js: {
+        expand: true,
+        cwd: 'source/js/',
+        src: '*.js',
+        dest: 'distro/js/',
       }
     },
+
+    concat: {
+      distro: {
+        src: ['distro/js/lib/**.js',
+              'distro/js/lib/dist/js/**.js',
+              'distro/js/main.js',
+              'distro/js/scripts/app.js',
+              'distro/js/scripts/**/*.js'],
+        dest: 'distro/js/distro.js'
+      }
+    },
+
+    remove: {
+    options: {
+      trace: true
+    },
+    fileList: ['path_to_file_1.extension', 'path_to_file_2.extension'],
+    dirList: ['path_to_dir_1', 'path_to_dir2/']
+  },
 
     //*****************************************************
  
@@ -139,7 +176,7 @@ module.exports = function(grunt) {
   grunt.registerTask('swam', [
     'express',
     'bower',
-    'htmlbuild',
+    'htmlbuild:source',
     'open',
     'watch'
   ]);
@@ -148,7 +185,11 @@ module.exports = function(grunt) {
     'uglify',
     'cssmin',
     'copy:index',
-    'copy:views'
+    'copy:views',
+    'copy:config',
+    'copy:scripts',
+    'copy:js',
+    'concat:distro'
   ]);
 
 };

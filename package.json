@@ -12,6 +12,7 @@
     "grunt-express": "~1.2.1",
     "grunt-html-build": "^0.3.2",
     "grunt-open": "~0.2.3",
+    "grunt-remove": "^0.1.0",
     "matchdep": "~0.1.2"
   }
 }

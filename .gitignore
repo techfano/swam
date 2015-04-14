@@ -1,0 +1,15 @@
+# Generated directories
+node_modules/
+bower_components/
+
+# Mac OS X hidden files
+.DS_Store
+
+# Vim swap files
+.*.sw?
+
+# Gedit swap files
+*~
+
+# Logs
+*.log

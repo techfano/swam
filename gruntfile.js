@@ -118,6 +118,12 @@ module.exports = function(grunt) {
     },
 
     jshint: {
+
+      all: ['source/js/scripts/**/*.js',
+            'source/js/scripts/*.js',
+            'source/js/config/*.js',
+            'source/js/*.js'],
+
       beforeconcat: ['distro/js/lib/**.js',
                     'distro/js/lib/dist/js/**.js',
                     'distro/js/main.js',
@@ -152,6 +158,7 @@ module.exports = function(grunt) {
         // or an Array of String for multiple entries
         // You can use globing patterns like `css/**/*.css`
         // See https://github.com/gruntjs/grunt-contrib-watch#files
+        tasks: ['jshint:all'],
         files: [
                 'index.html',
                 'source/**/*.js',

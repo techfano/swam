@@ -1,6 +1,12 @@
 # Generated directories
 node_modules/
 bower_components/
+distro/
+source/css/dist/
+source/dist/
+source/index.html
+source/js/lib/
+source/less/
 
 # Mac OS X hidden files
 .DS_Store

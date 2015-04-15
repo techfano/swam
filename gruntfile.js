@@ -135,7 +135,8 @@ module.exports = function(grunt) {
 
     clean: {
       distro:["distro/css/dist",
-              "distro/css/attach.css"],
+              "distro/css/attach.css",
+              "distro/zip"],
       source:["source/less",
               "source/dist"]
 

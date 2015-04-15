@@ -17,9 +17,5 @@ require.config({
     'angular-resource': ['angular']
   },
 
-  deps: ['app',
-         'directives/sticky',
-         'factories/promisesFactory',
-         'factories/resourceFactory'
-        ]
+  deps: ['app']
 });

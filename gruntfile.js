@@ -15,9 +15,7 @@ module.exports = function(grunt) {
                 beautify: true,
                 relative: true,
                 scripts: {
-                    bundle: [
-                        'source/js/config/config.js'
-                    ]
+                    bundle: []
                 },
                 styles: {
                     bundle: [ 
@@ -62,7 +60,7 @@ module.exports = function(grunt) {
         dest: 'source/',
         js_dest: 'source/js/lib',
         options: {
-          ignorePackages: ['jquery'],
+          ignorePackages: ['jquery','less'],
           packageSpecific: {
             bootstrap: {
               css_dest: 'source/css',
@@ -86,12 +84,6 @@ module.exports = function(grunt) {
         src: '*.html',
         dest: 'distro/views',
       },
-      config: {
-        expand: true,
-        cwd: 'source/js/config',
-        src: '*.js',
-        dest: 'distro/js/config',
-      },
       scripts: {
         expand: true,
         cwd: 'source/js/scripts/',
@@ -103,17 +95,22 @@ module.exports = function(grunt) {
         cwd: 'source/js/',
         src: '*.js',
         dest: 'distro/js/',
+      },
+      fonts: {
+        expand: true,
+        cwd: 'source/css/dist/fonts',
+        src: '*.*',
+        dest: 'distro/fonts'
       }
     },
 
     concat: {
-      distro: {
-        src: ['distro/js/lib/**.js',
-              'distro/js/lib/dist/js/**.js',
-              'distro/js/main.js',
-              'distro/js/scripts/app.js',
-              'distro/js/scripts/**/*.js'],
-        dest: 'distro/js/distro.js'
+      css:{
+
+        src: ['distro/css/attach.css',
+              'distro/css/dist/css/bootstrap.css'],
+        dest: 'distro/css/distro.css'
+
       }
     },
 
@@ -122,14 +119,26 @@ module.exports = function(grunt) {
       all: ['source/js/scripts/**/*.js',
             'source/js/scripts/*.js',
             'source/js/config/*.js',
-            'source/js/*.js'],
+            'source/js/*.js']
+    },
 
-      beforeconcat: ['distro/js/lib/**.js',
-                    'distro/js/lib/dist/js/**.js',
-                    'distro/js/main.js',
-                    'distro/js/scripts/app.js',
-                    'distro/js/scripts/**/*.js'],
-      afterconcat: ['distro/js/distro.js']
+    compress: {
+      distro: {
+        options: {
+          archive: 'distro/zip/distro.zip'
+        },
+        expand: true,
+        cwd: 'distro',
+        src: ['**']
+      }
+    },
+
+    clean: {
+      distro:["distro/css/dist",
+              "distro/css/attach.css"],
+      source:["source/less",
+              "source/dist"]
+
     },
    
     //*****************************************************
@@ -185,6 +194,7 @@ module.exports = function(grunt) {
     'express',
     'bower',
     'htmlbuild:source',
+    'clean:source',
     'open',
     'watch'
   ]);
@@ -195,10 +205,12 @@ module.exports = function(grunt) {
     'cssmin',
     'copy:index',
     'copy:views',
-    'copy:config',
     'copy:scripts',
     'copy:js',
-    'concat:distro'
+    'copy:fonts',
+    'concat:css',
+    'clean:distro',
+    'compress:distro'
   ]);
 
 };

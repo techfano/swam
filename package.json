@@ -4,6 +4,8 @@
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-bower": "^0.16.1",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-compress": "^0.13.0",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-cssmin": "^0.11.0",
@@ -13,7 +15,6 @@
     "grunt-express": "~1.2.1",
     "grunt-html-build": "^0.3.2",
     "grunt-open": "~0.2.3",
-    "grunt-remove": "^0.1.0",
     "matchdep": "~0.1.2"
   }
 }

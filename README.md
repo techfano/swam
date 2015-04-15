@@ -39,7 +39,7 @@ Finally execute the grunt tasks
 grunt swam
 </code>
 
-The command "grunt swam", create automatically the index.html, copy and incorporate inside index the tags for bower dependencies and javascript files, you can administrate too the index.html in the template file for example:
+The command "grunt swam", create automatically the index.html into "source" folder and you can edit all teh application here, copy and incorporate inside index the tags for bower dependencies and javascript files, you can administrate too the index.html in the template folder for example:
 
 - template/source
   - index.html
@@ -50,7 +50,7 @@ The command "grunt swam", create automatically the index.html, copy and incorpor
 grunt packing
 </code>
 
-This command create the "distro" file with the css and js minified, and all the necesary (in advance).
+This command create the "distro" folder with the css and js minified, ziped project into "distro/zip" folder and all the necesary (in advance).
 
 
 this command is executed for activate the grunt tasks, for to import and order the bower dependencies, minifying css and js files, develop with live overload and other tasks in advance.
